@@ -1,5 +1,5 @@
 ---
-
+import '../styles/global.css'
 ---
 
 <html lang="en">
@@ -8,9 +8,32 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>Wiki Search</title>
+		<script src="../utils/script.js"></script>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<section class="searchContainer">
+			<input type="search" id="searchInput" placeholder="Search Wikipedia...">
+			<button id="searchButton">Search</button>
+			<button id="randomButton">Show Random Article</button>
+		  </section>
+		  <br/>
+		  <section>
+		  </section>
+		  <div id="searchResults"></div>
 	</body>
 </html>
+
+<style>
+
+#searchInput {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+#randomButton {
+  color: #333;
+}
+
+</style>
